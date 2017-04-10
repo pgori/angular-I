@@ -19,6 +19,7 @@ angular.module('alurapic').controller('FotosController', function($scope, $http)
 			var indiceDaFoto = $scope.fotos.indexOf(foto);
 			$scope.fotos.splice(indiceDaFoto, 1);
 			$scope.mensagem = 'Foto ' + foto.titulo + ' removida com sucesso!';
+			//$scope.formulario.$setPristine(); //impede a validação do formulário logo depois de limpá-lo
 		})
 		.error(function(erro){
 			console.log('Não foi possível apagar a foto ' + foto.titulo);
